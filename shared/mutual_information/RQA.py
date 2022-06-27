@@ -2,36 +2,6 @@ import torch
 import torch.nn as nn
 import time
 
-class dRQA(nn.Module):
-
-    def __init__(self, sigma=.05, phi=.001):
-        super(dRQA, self).__init__()
-        self.delta = nn.Threshold(phi,0.)
-        self.cos = nn.CosineSimilarity(dim=-1)
-        # self.d = torch.distributions.HalfNormal(scale=sigma,validate_args=False)
-        self.d = torch.distributions.Normal(loc=1,scale=sigma,validate_args=False)
-
-    def coe(self,x,y):
-        # return 1-self.cos(x.unsqueeze(1),y)
-        return self.cos(x.unsqueeze(1),y)
-
-    def forward(self,Ex,Ey):
-        """
-        A "shorthand" version of determinism, estimated using Transformer vectors.
-          (see Coco & Dale 2014; "Cross-recurrence quantification analysis of categorical
-          and continuous time series: an R package")
-
-        :param x: a set of vectors for all tokens in sentence x (Ex)
-        :param y: a set of vectors for all tokens in sentence y (Ey)
-        :return: percent similarity of y to x via shorthand version of Determinism
-        """
-        C = torch.exp(self.d.log_prob(self.coe(Ex,Ey)))
-        # C = C/torch.exp(self.d.log_prob(torch.FloatTensor([0])))
-        # C = C/torch.exp(self.d.log_prob(torch.FloatTensor([1])))
-
-        return C.sum(dim=0)
-
-
 class hRQA(nn.Module):
 
     def __init__(self, sigma=.3, phi=.001, time_execution=False):
@@ -89,25 +59,3 @@ class hRQA(nn.Module):
 
     def batched(self, Ex, Ey):
         0
-
-class simpleRQA(nn.Module):
-
-    def __init__(self, phi=.9):
-        super(simpleRQA, self).__init__()
-        self.phi = phi
-        self.cos = nn.CosineSimilarity(dim=-1)
-
-    def forward(self,Ex,Ey):
-        """
-        A "shorthand" version of determinism, estimated using Transformer vectors.
-          (see Coco & Dale 2014; "Cross-recurrence quantification analysis of categorical
-          and continuous time series: an R package")
-
-        :param x: a set of vectors for all tokens in sentence x (Ex)
-        :param y: a set of vectors for all tokens in sentence y (Ey)
-        :return: percent similarity of y to x via shorthand version of Determinism
-        """
-        C = self.cos(Ex.unsqueeze(1), Ey) > self.phi
-
-        #Return mean, non-zero rows percentage.
-        return (C.sum(dim=-1) > 0).float()
