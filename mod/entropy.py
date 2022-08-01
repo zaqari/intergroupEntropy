@@ -17,7 +17,7 @@ class entropy(nn.Module):
 
         if self.condense_side == 'right':
             C = self.N.log_prob(C.max(dim=-1).values)
-            return (torch.exp(C) * C).sum()
+            return -(torch.exp(C) * C).sum()
 
         elif self.condense_side == 'left':
             C = self.N.log_prob(C.max(dim=0).values)
