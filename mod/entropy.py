@@ -7,19 +7,19 @@ class entropy(nn.Module):
         super(entropy, self).__init__()
         self.cos = nn.CosineSimilarity(dim=-1)
         self.N = torch.distributions.Normal(1,scale=sigma,validate_args=False)
-        self.side = 'right'
+        self.condense_side = 'right'
 
-    def forward(self, ex, ey, side=None):
+    def forward(self, ex, ey, condense_side=None):
         if bool(side):
-            self.side=side
+            self.condense_side=condense_side
 
         C = self.cos(ex.unsqueeze(1), ey)
 
-        if self.side == 'right':
+        if self.condense_side == 'right':
             C = self.N.log_prob(C.max(dim=-1).values)
             return (torch.exp(C) * C).sum()
 
-        elif self.side == 'left':
+        elif self.condense_side == 'left':
             C = self.N.log_prob(C.max(dim=0).values)
             return (torch.exp(C) * C).sum()
 
