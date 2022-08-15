@@ -24,6 +24,6 @@ class entropy(nn.Module):
             return -(torch.exp(C) * C).sum()
 
         else:
-            C1, C2 = C.max(dim=-1), C.max(dim=0)
+            C1, C2 = self.N.log_prob(C.max(dim=-1)), self.N.log_prob(C.max(dim=0))
             return -(torch.exp(C1) * C1).sum(), -(torch.exp(C2) * C2).sum()
 
