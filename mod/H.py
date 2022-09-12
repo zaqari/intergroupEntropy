@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import pandas as pd
 import numpy as np
-from kgen2.LM.mutual_information.entropy import entropy
+from .mod.entropy import entropy
 
 
 ###################################################################################################
