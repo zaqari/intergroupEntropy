@@ -14,4 +14,4 @@ keep_indeces = [i for i in dfs.index if sum([w in dfs['post_title'].loc[i].lower
 dfs=dfs.loc[keep_indeces].copy()
 
 output_file = "/Volumes/V'GER/comp_ling/DataScideProjects/convergenceEntropy/data/redditany/three_groups/woman_post_title/reddit_{}.csv".format('-'.join(subreddits))
-dfs.to_csv(output_file, index=False, encoding='utf-8')
+
