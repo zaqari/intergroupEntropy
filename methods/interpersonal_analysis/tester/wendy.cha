@@ -1,0 +1,150 @@
+@UTF8
+@PID:	11312/c-00017802-1
+@Begin
+@Languages:	eng
+@Participants:	CHI Wendy Target_Child , MOT Mother , FAT Father
+@ID:	eng|Warren|CHI|2;0.|female|typical||Target_Child|||
+@ID:	eng|Warren|MOT||female|||Mother|||
+@ID:	eng|Warren|FAT||male|||Father|||
+@Bg:	mother_freeplay
+*CHI:	Mikie .
+%mor:	n:prop|Mikie .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	oh , Mikie (.) Wendy , oh , what's that ?
+%mor:	co|oh cm|cm n:prop|Mikie n:prop|Wendy cm|cm co|oh cm|cm
+	pro:int|what~cop|be&3S pro:dem|that ?
+%gra:	1|4|COM 2|1|LP 3|4|SUBJ 4|9|SUBJ 5|4|LP 6|9|COM 7|6|LP 8|9|SUBJ
+	9|0|ROOT 10|9|PRED 11|9|PUNCT
+*MOT:	look at that !
+%mor:	v|look prep|at pro:dem|that !
+%gra:	1|0|ROOT 2|1|JCT 3|2|POBJ 4|1|PUNCT
+*CHI:	airplane .
+%mor:	n|airplane .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	airplane .
+%mor:	n|airplane .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*CHI:	oh , look .
+%mor:	co|oh cm|cm v|look .
+%gra:	1|0|INCROOT 2|1|LP 3|1|ENUM 4|1|PUNCT
+*MOT:	look .
+%mor:	co|look .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	you know what this is ?
+%mor:	pro:per|you v|know pro:int|what pro:dem|this cop|be&3S ?
+%gra:	1|2|SUBJ 2|0|ROOT 3|5|LINK 4|5|SUBJ 5|2|COMP 6|2|PUNCT
+*MOT:	(.) look at that , Wendy .
+%mor:	v|look prep|at pro:dem|that cm|cm n:prop|Wendy .
+%gra:	1|0|ROOT 2|1|JCT 3|2|POBJ 4|3|LP 5|1|COMP 6|1|PUNCT
+*MOT:	look at that .
+%mor:	v|look prep|at pro:dem|that .
+%gra:	1|0|ROOT 2|1|JCT 3|2|POBJ 4|1|PUNCT
+*CHI:	kiki [: kitty] .
+%mor:	n|kitty .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	no , those are pigs .
+%mor:	co|no cm|cm pro:dem|those cop|be&PRES n|pig-PL .
+%gra:	1|4|COM 2|1|LP 3|4|SUBJ 4|0|ROOT 5|4|PRED 6|4|PUNCT
+*MOT:	those are pigs !
+%mor:	pro:dem|those cop|be&PRES n|pig-PL !
+%gra:	1|2|SUBJ 2|0|ROOT 3|2|PRED 4|2|PUNCT
+*MOT:	Amye went out_of the room .
+%mor:	n:prop|Amye v|go&PAST prep|out_of det:art|the n|room .
+%gra:	1|2|SUBJ 2|0|ROOT 3|2|JCT 4|5|DET 5|3|POBJ 6|2|PUNCT
+*MOT:	we're gonna talk and she'll come back , okay ?
+%mor:	pro:sub|we~aux|be&PRES mod:aux|gonna v|talk coord|and
+	pro:sub|she~mod|will v|come adv|back cm|cm adj|okay ?
+%gra:	1|4|SUBJ 2|4|AUX 3|4|AUX 4|0|ROOT 5|8|LINK 6|8|SUBJ 7|8|AUX 8|4|CJCT
+	9|8|JCT 10|8|LP 11|8|JCT 12|4|PUNCT
+*MOT:	okay ?
+%mor:	co|okay ?
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	look , Wendy .
+%mor:	v|look cm|cm n:prop|Wendy .
+%gra:	1|0|ROOT 2|1|LP 3|1|ENUM 4|1|PUNCT
+*MOT:	let's look at the book .
+%mor:	v|let~pro:obj|us v|look prep|at det:art|the n|book .
+%gra:	1|0|ROOT 2|1|OBJ 3|1|XCOMP 4|3|JCT 5|6|DET 6|4|POBJ 7|1|PUNCT
+*MOT:	what's that ?
+%mor:	pro:int|what~cop|be&3S pro:dem|that ?
+%gra:	1|2|SUBJ 2|0|ROOT 3|2|PRED 4|2|PUNCT
+*MOT:	you know what that is .
+%mor:	pro:per|you v|know pro:int|what pro:dem|that cop|be&3S .
+%gra:	1|2|SUBJ 2|0|ROOT 3|5|LINK 4|5|SUBJ 5|2|COMP 6|2|PUNCT
+*CHI:	bee .
+%mor:	n|bee .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	a bee .
+%mor:	det:art|a n|bee .
+%gra:	1|2|DET 2|0|INCROOT 3|2|PUNCT
+*MOT:	that's right .
+%mor:	pro:dem|that~cop|be&3S n|right .
+%gra:	1|2|SUBJ 2|0|ROOT 3|2|PRED 4|2|PUNCT
+*MOT:	look at these .
+%mor:	v|look prep|at pro:dem|these .
+%gra:	1|0|ROOT 2|1|JCT 3|2|POBJ 4|1|PUNCT
+*MOT:	look at all these animals what are those little things ?
+%mor:	v|look prep|at qn|all pro:dem|these n|animal-PL pro:int|what
+	aux|be&PRES pro:dem|those adj|little n|thing-PL ?
+%gra:	1|0|ROOT 2|1|JCT 3|5|QUANT 4|5|DET 5|2|POBJ 6|10|MOD 7|10|AUX 8|10|DET
+	9|10|MOD 10|1|JCT 11|1|PUNCT
+*CHI:	cups .
+%mor:	n|cup-PL .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	&-um hm: .
+%mor:	co|hm .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	and what's that ?
+%mor:	coord|and pro:int|what~cop|be&3S pro:dem|that ?
+%gra:	1|3|LINK 2|3|SUBJ 3|0|ROOT 4|3|PRED 5|3|PUNCT
+*CHI:	peach .
+%mor:	n|peach .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	that's a chickie .
+%mor:	pro:dem|that~cop|be&3S det:art|a n|chick-DIM .
+%gra:	1|2|SUBJ 2|0|ROOT 3|4|DET 4|2|PRED 5|2|PUNCT
+*CHI:	oh .
+%mor:	co|oh .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	you know what that is ?
+%mor:	pro:per|you v|know pro:int|what pro:dem|that cop|be&3S ?
+%gra:	1|2|SUBJ 2|0|ROOT 3|5|LINK 4|5|SUBJ 5|2|COMP 6|2|PUNCT
+*CHI:	purse .
+%mor:	n|purse .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	those are pickles .
+%mor:	pro:dem|those cop|be&PRES n|pickle-PL .
+%gra:	1|2|SUBJ 2|0|ROOT 3|2|PRED 4|2|PUNCT
+*MOT:	that's what Daddy eats for lunch (.) pickles .
+%mor:	pro:dem|that~cop|be&3S pro:int|what n:prop|Daddy v|eat-3S prep|for
+	n|lunch n|pickle-PL .
+%gra:	1|2|SUBJ 2|0|ROOT 3|5|LINK 4|5|SUBJ 5|2|CPRED 6|5|JCT 7|8|MOD 8|6|POBJ
+	9|2|PUNCT
+*CHI:	pickles .
+%mor:	n|pickle-PL .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	pickles , &-um hm: .
+%mor:	n|pickle-PL cm|cm co|hm .
+%gra:	1|0|INCROOT 2|1|LP 3|1|ENUM 4|1|PUNCT
+*CHI:	yeah , pickles .
+%mor:	co|yeah cm|cm v|pickle-3S .
+%gra:	1|0|INCROOT 2|1|LP 3|1|ENUM 4|1|PUNCT
+*MOT:	lot of pickles , &-um hm: .
+%mor:	n|lot prep|of n|pickle-PL cm|cm co|hm .
+%gra:	1|0|INCROOT 2|1|NJCT 3|2|POBJ 4|1|LP 5|1|ENUM 6|1|PUNCT
+*CHI:	yeah , pi [//] cars .
+%mor:	co|yeah cm|cm n|car-PL .
+%gra:	1|0|INCROOT 2|1|LP 3|1|ENUM 4|1|PUNCT
+*MOT:	cars , &-um hm: .
+%mor:	n|car-PL cm|cm co|hm .
+%gra:	1|0|INCROOT 2|1|LP 3|1|ENUM 4|1|PUNCT
+*MOT:	do you know what color that is ?
+%mor:	mod|do pro:per|you v|know pro:int|what n|color pro:rel|that
+	cop|be&3S ?
+%gra:	1|3|AUX 2|3|SUBJ 3|0|ROOT 4|5|MOD 5|3|OBJ 6|7|LINK 7|5|CMOD 8|3|PUNCT
+*CHI:	ohchell [: yellow] .
+%mor:	n|yellow .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	&-um hm: .
+%mor:	co|hm .
+%gra:	1|0|INCROOT 2|1|PUNCT

@@ -1,0 +1,118 @@
+@UTF8
+@PID:	11312/c-00017788-1
+@Begin
+@Languages:	eng
+@Participants:	CHI David Target_Child , MOT Mother , FAT Father
+@ID:	eng|Warren|CHI|5;10.|male|typical||Target_Child|||
+@ID:	eng|Warren|MOT||female|||Mother|||
+@ID:	eng|Warren|FAT||male|||Father|||
+@Bg:	mother_freeplay
+*CHI:	0 .
+%par:	laughing
+*MOT:	what you laughing about ?
+%mor:	pro:int|what pro:per|you part|laugh-PRESP adv|about ?
+%gra:	1|3|LINK 2|3|SUBJ 3|0|ROOT 4|3|JCT 5|3|PUNCT
+*CHI:	nothing .
+%mor:	pro:indef|nothing .
+%gra:	1|0|INCROOT 2|1|PUNCT
+%par:	laughing
+*MOT:	why don't you +...
+%mor:	adv:int|why mod|do~neg|not pro:per|you +...
+%gra:	1|4|LINK 2|4|AUX 3|2|NEG 4|0|ROOT 5|4|PUNCT
+*MOT:	Christopher , why don't you tell , tell Daddy about you playing Pac_Man .
+%mor:	n:prop|Christopher cm|cm adv:int|why mod|do~neg|not pro:per|you
+	v|tell cm|cm v|tell n:prop|Daddy prep|about pro:per|you
+	part|play-PRESP n:prop|Pac_Man .
+%gra:	1|0|INCROOT 2|1|LP 3|7|LINK 4|7|AUX 5|4|NEG 6|7|SUBJ 7|1|CJCT 8|7|LP
+	9|7|COMP 10|9|OBJ 11|9|JCT 12|11|POBJ 13|9|XJCT 14|13|OBJ 15|1|PUNCT
+*MOT:	didn't Michael take you to play Pac_Man at bumper's junction ?
+%mor:	mod|do&PAST~neg|not n:prop|Michael v|take pro:per|you prep|to
+	n|play n:prop|Pac_Man prep|at n|bump&dv-AGT~poss|s n|junction ?
+%gra:	1|4|AUX 2|1|NEG 3|4|SUBJ 4|0|ROOT 5|4|OBJ 6|4|JCT 7|6|POBJ 8|4|XJCT
+	9|8|JCT 10|12|MOD 11|10|POSS 12|9|POBJ 13|4|PUNCT
+*MOT:	huh ?
+%mor:	co|huh ?
+%gra:	1|0|INCROOT 2|1|PUNCT
+*CHI:	yeh .
+%mor:	co|yeh .
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	well ?
+%mor:	co|well ?
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	did you win ?
+%mor:	v|do&PAST pro:per|you v|win ?
+%gra:	1|3|LINK 2|3|SUBJ 3|0|ROOT 4|3|PUNCT
+*MOT:	what did you do ?
+%mor:	pro:int|what mod|do&PAST pro:per|you v|do ?
+%gra:	1|4|LINK 2|4|AUX 3|4|SUBJ 4|0|ROOT 5|4|PUNCT
+*CHI:	I won !
+%mor:	pro:sub|I v|win&PAST !
+%gra:	1|2|SUBJ 2|0|ROOT 3|2|PUNCT
+*MOT:	how many games did you play ?
+%mor:	adv:int|how qn|many n|game-PL mod|do&PAST pro:per|you v|play ?
+%gra:	1|3|LINK 2|3|QUANT 3|6|SUBJ 4|6|AUX 5|6|SUBJ 6|0|ROOT 7|6|PUNCT
+*CHI:	&-um , I don't know .
+%mor:	cm|cm pro:sub|I mod|do~neg|not v|know .
+%gra:	1|5|LINK 2|5|SUBJ 3|5|AUX 4|3|NEG 5|0|ROOT 6|5|PUNCT
+*MOT:	you don't know ?
+%mor:	pro:per|you mod|do~neg|not v|know ?
+%gra:	1|4|SUBJ 2|4|AUX 3|2|NEG 4|0|ROOT 5|4|PUNCT
+*MOT:	I know what's better to talk about .
+%mor:	pro:sub|I v|know pro:int|what~aux|be&3S adj|good&CP prep|to n|talk
+	adv|about .
+%gra:	1|2|SUBJ 2|0|ROOT 3|5|SUBJ 4|5|AUX 5|2|COMP 6|5|JCT 7|6|POBJ 8|5|JCT
+	9|2|PUNCT
+*MOT:	you need to tell (th)em about , &-um , junk+man .
+%mor:	pro:per|you v|need inf|to v|tell pro:obj|them adv|about cm|cm cm|cm
+	n|+n|junk+n|man .
+%gra:	1|2|SUBJ 2|0|ROOT 3|4|INF 4|2|XCOMP 5|4|OBJ 6|9|JCT 7|6|LP 8|6|LP
+	9|4|OBJ 10|2|PUNCT
+*CHI:	xxx .
+*MOT:	your letter man !
+%mor:	det:poss|your n|letter n|man !
+%gra:	1|3|MOD 2|3|MOD 3|0|INCROOT 4|3|PUNCT
+*CHI:	no !
+%mor:	co|no !
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	yes !
+%mor:	co|yes !
+%gra:	1|0|INCROOT 2|1|PUNCT
+*MOT:	tell (th)em what I put all over your shirt .
+%mor:	v|tell pro:obj|them pro:int|what pro:sub|I v|put&ZERO adv|all
+	prep|over det:poss|your n|shirt .
+%gra:	1|0|ROOT 2|1|OBJ 3|5|LINK 4|5|SUBJ 5|1|COMP 6|5|JCT 7|5|JCT 8|9|MOD
+	9|7|POBJ 10|1|PUNCT
+*MOT:	&-um &-um .
+%com:	break in interaction
+*CHI:	sticker .
+%mor:	v|sticker .
+%gra:	1|0|ROOT 2|1|PUNCT
+*MOT:	sticker .
+%mor:	v|sticker .
+%gra:	1|0|ROOT 2|1|PUNCT
+*CHI:	and a dress for a Barbie doll , and a wheel , and part of a necklace , and a shoestring , and a ring , or whatever .
+%mor:	coord|and det:art|a n|dress prep|for det:art|a n:prop|Barbie n|doll
+	cm|cm coord|and det:art|a n|wheel cm|cm coord|and n|part prep|of
+	det:art|a n|necklace cm|cm coord|and det:art|a n|+n|shoe+n|string
+	cm|cm coord|and det:art|a n|ring cm|cm coord|or pro:int|whatever .
+%gra:	1|0|INCROOT 2|3|DET 3|1|COORD 4|3|NJCT 5|7|DET 6|7|MOD 7|4|POBJ 8|7|LP
+	9|3|CONJ 10|11|DET 11|9|COORD 12|11|LP 13|11|CONJ 14|13|COORD 15|14|NJCT
+	16|17|DET 17|15|POBJ 18|3|LP 19|3|CONJ 20|21|DET 21|19|COORD 22|21|LP
+	23|21|CONJ 24|25|DET 25|23|COORD 26|25|LP 27|25|CONJ 28|27|COORD
+	29|1|PUNCT
+*MOT:	a bracelet .
+%mor:	det:art|a n|bracelet .
+%gra:	1|2|DET 2|0|INCROOT 3|2|PUNCT
+*CHI:	a bracelet .
+%mor:	det:art|a n|bracelet .
+%gra:	1|2|DET 2|0|INCROOT 3|2|PUNCT
+*CHI:	a key , a coat+hanger .
+%mor:	det:art|a n|key cm|cm det:art|a n|+n|coat+n|hanger .
+%gra:	1|2|DET 2|0|INCROOT 3|2|LP 4|5|DET 5|2|ENUM 6|2|PUNCT
+*MOT:	and what's on the back ?
+%mor:	coord|and pro:int|what~poss|s prep|on det:art|the n|back ?
+%gra:	1|0|INCROOT 2|1|COORD 3|2|POSS 4|2|JCT 5|6|DET 6|4|POBJ 7|1|PUNCT
+*CHI:	&-um .
+*MOT:	a piece of paper .
+%mor:	det:art|a n|piece prep|of n|paper .
+%gra:	1|2|DET 2|0|INCROOT 3|2|NJCT 4|3|POBJ 5|2|PUNCT
