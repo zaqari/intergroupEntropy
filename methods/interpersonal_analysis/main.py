@@ -102,10 +102,10 @@ lix = len(files)
 # 2:49 start
 
 # process the first file observed processes
-procChaFile(files[0],'test.csv',mode='w')
+procChaFile(files[0],'results.csv',mode='w')
 for i in range(1,lix):
     print('Observed '+str(i))
-    procChaFile(files[i],'test.csv')
+    procChaFile(files[i],'results.csv')
 
 # sample a random entry from files and save it as comparison_file but exclude from files the ith entry
 for i in range(lix):
@@ -119,7 +119,7 @@ for i in range(lix):
         rg = files[0:i]
         rg.extend(files[i+1:len(files)])
     comparison_file = random.choice(rg)    
-    procChaFile(files[i],'test.csv',baseline=comparison_file)
+    procChaFile(files[i],'results.csv',baseline=comparison_file)
 
 
 
