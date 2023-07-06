@@ -2,7 +2,7 @@ library(stringdist)
 library(lme4)
 
 # load, check
-a = read.csv('../test.csv',header=T)
+a = read.csv('../results.csv',header=T)
 a$abs_dist = abs(a$i-a$j)
 a$rel_dist = a$i-a$j
 a = a[a$n_i>5&a$n_j>5,]
