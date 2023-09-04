@@ -3,11 +3,11 @@ import pandas as pd
 import numpy as np
 
 bot = praw.Reddit(
-    client_id="s19hRA227GIURi6mEsuREQ",
-    client_secret="hFMidkmAnAXkHHvOn2iSQyYTki3RpQ",
-    user_agent="PhisherFinderDestroyer",
-    username="PhisherAvenger",
-    password="7Mojgani7&"
+    client_id="",
+    client_secret="",
+    user_agent="",
+    username="",
+    password=""
 )
 
 def get_top_posts_monthly(subreddit):
