@@ -79,7 +79,9 @@ def procChaFile(fname, outfile, baseline = '', mode = 'a', levels=[7,-1], k=10):
                 float(h_val[0]),float(h_val[1]), baseline]], columns=cols)])            
     df.to_csv(outfile, mode=mode, header=(mode=='w'))
 
-# list *.cha files under the N subfolder
+# extract all *.cha files into a `canbc' folder in the main.py's path
+# make sure all *.cha are in the `canbc' root, which may require extraction
+# like this: mv */*.cha .
 # https://ca.talkbank.org/access/CABNC.html
 files_temp = glob.glob('canbc/*.cha')
 
