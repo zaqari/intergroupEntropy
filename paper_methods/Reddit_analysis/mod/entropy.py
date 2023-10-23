@@ -22,11 +22,11 @@ class entropy(nn.Module):
             # (1) Get max cosine similarity
             # (2) Get log prob of similarity
             # (3) Calculate log prob and entropy
-            C = self.N.log_prob(1-C.max(dim=self.dim).values)
+            C = self.N.log_prob(1+C.max(dim=self.dim).values)
             return -(torch.exp(C) * C).sum()
 
         else:
-            C1, C2 = self.N.log_prob(1-C.max(dim=-1).values), self.N.log_prob(1-C.max(dim=0).values)
+            C1, C2 = self.N.log_prob(1+C.max(dim=-1).values), self.N.log_prob(1+C.max(dim=0).values)
             C = None
             return -(torch.exp(C1) * C1).sum(), -(torch.exp(C2) * C2).sum()
 
@@ -36,13 +36,13 @@ class entropy(nn.Module):
 
         C = self.cos(ex.unsqueeze(1), ey)
 
-        C = self.N.log_prob(C.max(dim=self.dim).values)
+        C = self.N.log_prob(1+C.max(dim=self.dim).values)
         return -(torch.exp(C) * C)
 
     def on_indexes(self, ex, ey, x_indeces, y_indeces):
         C = self.cos(ex.unsqueeze(1), ey)
 
-        C1, C2 = self.N.log_prob(C.max(dim=-1).values[x_indeces]), self.N.log_prob(C.max(dim=0).values[y_indeces])
+        C1, C2 = self.N.log_prob(1+C.max(dim=-1).values[x_indeces]), self.N.log_prob(1+C.max(dim=0).values[y_indeces])
         return -(torch.exp(C1) * C1).sum(), -(torch.exp(C2) * C2).sum()
 
 class informativeness(nn.Module):
@@ -65,13 +65,13 @@ class informativeness(nn.Module):
             # (1) Get max cosine similarity
             # (2) Get log prob of similarity
             # (3) Calculate log prob and entropy
-            C = self.N.log_prob(C.max(dim=self.dim).values)
-            return C.sum()
+            C = self.N.log_prob(1+C.max(dim=self.dim).values)
+            return -C.sum()
 
         else:
-            C1, C2 = self.N.log_prob(C.max(dim=-1).values), self.N.log_prob(C.max(dim=0).values)
+            C1, C2 = self.N.log_prob(1+C.max(dim=-1).values), self.N.log_prob(1+C.max(dim=0).values)
             C = None
-            return C1.sum(), C2.sum()
+            return -C1.sum(), -C2.sum()
 
     def unsummed(self, ex, ey, dim=None):
         if bool(dim):
@@ -84,8 +84,8 @@ class informativeness(nn.Module):
     def on_indexes(self, ex, ey, x_indeces, y_indeces):
         C = self.cos(ex.unsqueeze(1), ey)
 
-        C1, C2 = self.N.log_prob(C.max(dim=-1).values[x_indeces]), self.N.log_prob(C.max(dim=0).values[y_indeces])
-        return C1.sum(), C2.sum()
+        C1, C2 = self.N.log_prob(1+C.max(dim=-1).values[x_indeces]), self.N.log_prob(1+C.max(dim=0).values[y_indeces])
+        return -C1.sum(), -C2.sum()
 
 class cudaH(nn.Module):
 
@@ -135,7 +135,7 @@ class cudaH(nn.Module):
         else:
             C = self.cos(ex.unsqueeze(1), ey).max(dim=self.dim).values
 
-        C = self.N.log_prob(1 - C)
+        C = self.N.log_prob(1 + C)
 
         return -(self.P(C) * C).sum()
 
@@ -143,12 +143,12 @@ class cudaH(nn.Module):
 
         if (len(ex) >= self.stream_at) or (len(ey) >= self.stream_at):
             C1, C2 = self.streamCOS(ex, ey).max(dim=-1).values, self.streamCOS(ey, ex).max(dim=-1).values
-            C1, C2 = self.N.log_prob(1-C1), self.N.log_prob(1-C2)
+            C1, C2 = self.N.log_prob(1+C1), self.N.log_prob(1+C2)
 
         else:
             C = self.cos(ex.unsqueeze(1), ey)
             C1, C2 = C.max(dim=-1).values, C.max(dim=0).values
-            C1, C2 = self.N.log_prob(1 - C1), self.N.log_prob(1 - C2)
+            C1, C2 = self.N.log_prob(1 + C1), self.N.log_prob(1 + C2)
 
         return -(self.P(C1) * C1).sum(), -(self.P(C2) * C2).sum()
 
@@ -158,36 +158,18 @@ class cudaH(nn.Module):
         else:
             return self.dual_sided(ex, ey)
 
-
-
-
-
-    # def forward(self, ex, ey, dim=None):
-    #     if bool(dim):
-    #         self.dim = dim
-    #
-    #     if len(ex) >= self.stream_at:
-    #         C = self.streamCOS(ex, ey)
-    #
-    #     else:
-    #         C = self.cos(ex.unsqueeze(1), ey).max(dim=self.dim).values
-    #
-    #     C = self.N.log_prob(1 - C)
-    #
-    #     return -(torch.exp(C) * C).sum()
-
     def unsummed(self, ex, ey, dim=None):
         if bool(dim):
             self.dim = dim
 
         C = self.streamCOS(ex, ey)
 
-        C = self.N.log_prob(1 - C)
+        C = self.N.log_prob(1 + C)
         return -(torch.exp(C) * C)
 
     def on_indexes(self, ex, ey, x_indeces, y_indeces):
         C = self.cos(ex.unsqueeze(1), ey)
 
-        C1, C2 = self.N.log_prob(1 - C.max(dim=-1).values[x_indeces]), self.N.log_prob(1 - C.max(dim=0).values[y_indeces])
+        C1, C2 = self.N.log_prob(1 + C.max(dim=-1).values[x_indeces]), self.N.log_prob(1 + C.max(dim=0).values[y_indeces])
         del C
         return -(torch.exp(C1) * C1).sum(), -(torch.exp(C2) * C2).sum()
