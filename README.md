@@ -1,6 +1,8 @@
 ### intergroupEntropy
 # BERTs of a Feather: Measuring entropy in communication between and within groups
 
+### THIS CODE HAS BEEN IMPLEMENTED AS A PYTHON PACKAGE AND CAN BE FOUND HERE: [https://github.com/zaqari/EVM](https://github.com/zaqari/EVM)
+
 The following project is reported in BERTs of a Feather: Measuring entropy in communication between and within groups. 
 
 - For getting started with using the code, see `./GETTING_STARTED.ipynb`
@@ -10,4 +12,14 @@ The following project is reported in BERTs of a Feather: Measuring entropy in co
 - See `./mod` for PyTorch class implementing entropy calculation model. 
 
 ### Citation:
-TBD
+```
+@article{rosen_berts_2023,
+	title = {{BERTs} of a feather: {Studying} inter- and intra-group communication via information theory and language models},
+	shorttitle = {{BERTs} of a feather},
+	url = {https://link.springer.com/10.3758/s13428-023-02267-2},
+	doi = {10.3758/s13428-023-02267-2},
+	journal = {Behavior Research Methods},
+	author = {Rosen, Zachary P and Dale, Rick},
+	year = {2023},
+}
+```
