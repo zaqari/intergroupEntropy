@@ -3,6 +3,10 @@
 
 ### THIS CODE HAS BEEN IMPLEMENTED AS A PYTHON PACKAGE AND CAN BE FOUND HERE: [https://github.com/zaqari/EVM](https://github.com/zaqari/EVM)
 
+### 🎊 The implementation is now available to download from PyPI!! 🎉 
+`pip install convergence-entropy-metric`
+
+### Details:
 The following project is reported in BERTs of a Feather: Measuring entropy in communication between and within groups. 
 
 - For getting started with using the code, see `./GETTING_STARTED.ipynb`
